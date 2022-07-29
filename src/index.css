@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+*{
+    margin: 0;
+    padding: 0;
+    display: flexbox;
+  }
+  
+  .user-form{
+    width: max;
+    height: max;
+    text-align: center;
+  }
+  
+  .user-input{
+    padding: 10px 24px;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 40%;
+    height: 30px;
+    margin: 50px;
+    font-size: 20px;
+    letter-spacing: .1ch;
+  }
+  .user-input:hover{
+    border-color: orange;
+  }
+  .search-button:hover{
+    border: 1px solid orange;
+    cursor: pointer;
+  }
+  
+  .search-button{
+    padding: 10px 24px;
+    width: 150px;
+    height: 50px;
+    background: #05b8ff;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 20px;
+    border:none;
+    letter-spacing: .1ch;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
