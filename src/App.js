@@ -1,10 +1,10 @@
-import Card from './Components/Card';
-import SearchBar from './Components/Header';
+import Header from './Components/Pages/Header';
+import Card from './Components/Pages/Card';
 
 function App() {
   return (
     <>
-      <SearchBar/>
+      <Header/>
       <Card/>
     </>
   );

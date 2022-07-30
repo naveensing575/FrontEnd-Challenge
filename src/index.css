@@ -1,9 +1,30 @@
-*{
-    margin: 0;
-    padding: 0;
-    display: flexbox;
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  .Card{
+    height: 350px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid grey;
+    text-align: center;
   }
-  
+  .img-container{
+    margin: 30px;
+  }
+  .user-image{
+    border-radius: 50%;
+    border: none;
+  }
   .user-form{
     width: max;
     height: max;
@@ -11,7 +32,7 @@
   }
   
   .user-input{
-    padding: 10px 24px;
+    padding: 24px 24px;
     border: 1px solid black;
     border-radius: 25px;
     width: 40%;
@@ -20,12 +41,15 @@
     font-size: 20px;
     letter-spacing: .1ch;
   }
-  .user-input:hover{
-    border-color: orange;
-  }
+
   .search-button:hover{
-    border: 1px solid orange;
-    cursor: pointer;
+  background: #7e8485;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: background-color 0.5s;
+  outline: none;
+  cursor: pointer;
   }
   
   .search-button{
@@ -39,11 +63,14 @@
     border:none;
     letter-spacing: .1ch;
   }
+
+  /*To reomve input field arrows*/
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
+  /*For mozilla*/
   input[type=number] {
     -moz-appearance: textfield;
   }

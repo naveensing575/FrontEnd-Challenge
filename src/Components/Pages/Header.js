@@ -12,7 +12,7 @@ function Header() {
     <form method="get" onSubmit={handleForm} className='user-form'>
         <input
             type="number"
-            placeholder="Search for a broker"
+            placeholder="Find your broker"
             value={userCode} 
             className='user-input'
         />
