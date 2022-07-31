@@ -48,7 +48,7 @@ function Card({search}) {
     }
 
     return loading? (<h3><Spinner/></h3>):(
-        <div className='container'>
+        <div className='container' data-testid="card">
             <div className='row'>
         {
             filteredData.map((broker)=>{
