@@ -30,7 +30,7 @@ function Items({broker}) {
   return (
     <article id="Card">
         <div className="img-container">
-          <img src={profilePicture} alt='user_image' style={{borderRadius:'50%'}} height='120px' width='120px'/>
+          <img src={profilePicture} alt='user_image' className='image-style' height='120px' width='120px'/>
         </div>
         <h4 className='name'>{name.length>15?name.slice(0,15):name}</h4>
         <h3 className='rating '>{rating===0?'':rating.toFixed(1)} {handleRating(rating)}</h3>

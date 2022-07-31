@@ -40,7 +40,7 @@ function Card({search}) {
     // console.log(search)
     //condition for displaying loader and cards
     if (error) {
-        return <>{error.message}</>;
+        return <h3 className='d-flex align-items-center justify-content-center'>{error.message}</h3>;
     }
     else if(!loading && (!list || list.length === 0))
     {
@@ -53,7 +53,7 @@ function Card({search}) {
         {
             filteredData.map((broker)=>{
                 return (
-                <div className="col-md-3" key={broker.id} >
+                <div className="col-md-3 col-xs-4" key={broker.id} >
                     <Items broker={broker}/>
                 </div>    
             )})

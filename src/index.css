@@ -14,7 +14,7 @@ Global Styles
   #Card{
     height: 420px;
     width: 260px;
-    background-color: #fff;
+    background-color: #DFF6FF;
     border-radius: 20px;
     border: 1px solid grey;
     text-align: center;
@@ -40,6 +40,10 @@ Global Styles
   }
   .img-container{
     margin: 30px;
+    border-radius: 50%;
+  }
+  .image-style{
+    border-radius: 50%;
   }
   .user-image{
     border-radius: 50%;
@@ -121,3 +125,50 @@ Global Styles
   input[type=number] {
     -moz-appearance: textfield;
   }
+  body {
+    background-color: #06283D;
+  }
+
+/* Media Query for Mobile Devices */
+   @media (max-width: 480px) {
+  body {
+    background-color: #06283D;
+  }
+  .container{
+    align-items: center;
+    justify-content: center;
+  }
+  .user-input {
+    font-size: medium;
+    width: 250px;
+  }
+  .search-button{
+    font-size: medium;
+    padding: 10px 15px;
+    height: 50px;
+    width: 100px;
+  }
+    
+}
+  
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-color: #06283D;
+    }
+    .container{
+      align-items: center;
+      justify-content: center;
+    }
+    .user-input {
+      font-size: medium;
+      width: 250px;
+    }
+    .search-button{
+      font-size: medium;
+      padding: 10px 15px;
+      height: 50px;
+      width: 100px;
+    }
+    
+}
