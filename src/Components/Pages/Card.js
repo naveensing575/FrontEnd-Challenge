@@ -10,6 +10,7 @@ function Card({search}) {
     
     useEffect(() => {
         setLoading(true)
+        //fetch API with GET method
         fetch('https://mini-apps.stage.effi.com.au/api/Brokers?query=2000',{method:'GET'})
                 .then((res) => res.json())
                 .then(
@@ -23,28 +24,10 @@ function Card({search}) {
                     (error) => {
                         setLoading(false);
                         setError(error);
-        // getBrokers();
     }
     );
 }, []);
 
-    // const getBrokers=async()=>{
-    //         setLoading(true);
-    //         await fetch('https://mini-apps.stage.effi.com.au/api/Brokers?query=2000',{method:'GET'})
-    //         .then((response)=>{
-    //             if(response.ok){
-    //                 return response.json();
-    //             }
-    //         throw new Error('Something went wrong');
-    //         })
-    //         .then((responseJSON)=>{
-    //             setLoading(false);
-    //             setList(responseJSON);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error)
-    //         });
-    // }
 
     const filteredData = list.filter( broker => {
         if(search==='')

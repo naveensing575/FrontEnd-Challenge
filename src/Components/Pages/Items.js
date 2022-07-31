@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 function Items({broker}) {
 
   //prop drilling
@@ -41,6 +42,13 @@ function Items({broker}) {
         <button className='contact-button'>Contact</button>
       </article>
   )
+}
+
+Items.defaultProps={
+  broker:[]
+}
+Items.propTypes={
+  broker: PropTypes.object.isRequired
 }
 
 export default Items

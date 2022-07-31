@@ -25,7 +25,9 @@ function Header() {
             className='user-input'
             onChange={inputHandler}
             maxLength='4'
-            pattern="[0-9]*"
+            //removing the scroll option for number input.
+            onWheel={(e) => e.target.blur()}
+            //only 0-9 numbers allowed
             onKeyPress={(event) => {
                 if (!/[0-9]/.test(event.key)) {
                   event.preventDefault();
