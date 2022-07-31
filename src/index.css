@@ -10,12 +10,7 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
-  /* #card-container{
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  } */
+
   #Card{
     height: 420px;
     width: 260px;
@@ -35,6 +30,9 @@ Global Styles
   }
   .count{
     color: #7e8485;
+  }
+  .color{
+    color: #00b4fb;
   }
   .rating{
     font-size: medium;
@@ -86,7 +84,7 @@ Global Styles
   }
 
   .contact-button{
-    padding: 10px;
+    padding: 8px;
     width: 130px;
     height: 40px;
     background: #05b8ff;

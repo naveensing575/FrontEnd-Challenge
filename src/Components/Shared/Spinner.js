@@ -1,7 +1,16 @@
-import loader from '../Assets/spinner.gif'
+import loader from '../Assets/Spinner.gif'
 
 function Spinner() {
-  return <img src={loader} alt='loading...'/>
+  return (
+        <div className='d-flex align-items-center justify-content-center'>
+          <img 
+            src={loader} 
+            alt='loading...'
+            height={100}
+            width={100}
+          />
+        </div>
+  )
 }
 
 export default Spinner

@@ -1,12 +1,8 @@
 function Items({broker}) {
 
-  //css inside js as internal styling
-  const imgStyle={
-    borderRadius:'50%'
-  }
-
   //prop drilling
   const{name, reviewCount, description, profilePicture, location, registration, rating}=broker;
+  const userCode= location.slice(5);
   const FixedDesc= description || '';
 
   //Rating provided
@@ -31,21 +27,21 @@ function Items({broker}) {
     }
   }
   return (
+    <section className="container">
     <article id="Card">
         <div className="img-container">
-          <img src={profilePicture} alt='user_image' style={imgStyle} height='120px' width='120px'/>
+          <img src={profilePicture} alt='user_image' style={{borderRadius:'50%'}} height='120px' width='120px'/>
         </div>
         <h4 className='name'>{name.length>15?name.slice(0,15):name}</h4>
         <h3 className='rating '>{rating===0?'':rating.toFixed(1)} {handleRating(rating)}</h3>
         <p className='reviews '>{reviewCount} <span className="count">Reviews</span> </p>
-        <p className='desc '>Description: {FixedDesc.length>15?description.slice(0,10):description}...</p>
+        <small style={{}}>Description: {FixedDesc.length>15?description.slice(0,10):description}...</small>
         <hr/>
-        <div className="">
-          <span className="num-id">{location.slice(0,3)}</span><span>{location.slice(3)}</span>
-          <span className="num-id">{registration.slice(0,3)}</span><span>{registration.slice(3)}</span>
-        </div>
+        <span className="num-id">{location.slice(0,3)}</span>: <span className="color"> {userCode}</span>
+        <span className="num-id">{registration.slice(0,3)}</span>: <span className="color">{registration.slice(5)}</span>
         <button className='contact-button'>Contact</button>
       </article>
+      </section>
   )
 }
 

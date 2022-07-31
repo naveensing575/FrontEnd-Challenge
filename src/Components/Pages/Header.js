@@ -1,23 +1,41 @@
 import {useState} from 'react';
+import Card from './Card';
 
 function Header() {
 
-    const [userCode, setuserCode] = useState();
+    const [search, setSearch]= useState('');
+    const inputHandler = (e) => {
+        const { value, maxLength } = e.target;
+        let code = value.slice(0, maxLength);
+        setSearch(code);
+    }
 
     const handleForm =(e)=>{
         e.preventDefault();
     }
 
   return (
-    <form method="get" onSubmit={handleForm} className='user-form'>
+    <>
+    <form onSubmit={handleForm} className='user-form'>
         <input
             type="number"
-            placeholder="Find your broker"
-            value={userCode} 
+            value={search}
+            placeholder="Find your broker..."
             className='user-input'
+            onChange={inputHandler}
+            maxLength='4'
+            pattern="[0-9]*"
+            onKeyPress={(event) => {
+                if (!/[0-9]/.test(event.key)) {
+                  event.preventDefault();
+                }
+              }}
+            required
         />
         <button className='search-button' type='submit'>Search</button>
     </form>
+    <Card search={search}/>
+    </>
 );
 }
 
