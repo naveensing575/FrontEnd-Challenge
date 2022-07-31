@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react';
 import Items from "./Items";
 import Spinner from '../Shared/Spinner';
+import PropTypes from 'prop-types';
 
 function Card({search}) {
     const [list, setList] = useState([]);
@@ -80,5 +81,12 @@ function Card({search}) {
 }
 
 
+Card.defaultProps={
+    search:''
+}
+
+Card.propTypes={
+    search: PropTypes.string.isRequired
+}
 
 export default Card

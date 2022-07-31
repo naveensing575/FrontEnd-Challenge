@@ -18,7 +18,8 @@ Global Styles
     border-radius: 20px;
     border: 1px solid grey;
     text-align: center;
-    margin:28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .name{
     margin-top: -25px;

@@ -27,7 +27,6 @@ function Items({broker}) {
     }
   }
   return (
-    <section className="container">
     <article id="Card">
         <div className="img-container">
           <img src={profilePicture} alt='user_image' style={{borderRadius:'50%'}} height='120px' width='120px'/>
@@ -41,7 +40,6 @@ function Items({broker}) {
         <span className="num-id">{registration.slice(0,3)}</span>: <span className="color">{registration.slice(5)}</span>
         <button className='contact-button'>Contact</button>
       </article>
-      </section>
   )
 }
 

@@ -5,6 +5,7 @@ function Header() {
 
     const [search, setSearch]= useState('');
     const inputHandler = (e) => {
+        //allowing only 4-digit number in search bar
         const { value, maxLength } = e.target;
         let code = value.slice(0, maxLength);
         setSearch(code);
