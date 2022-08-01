@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <>
-    <form onSubmit={handleForm} className='user-form'>
+    <form onSubmit={handleForm} className='user-form' data-testid='search-bar'>
         <input
             type="number"
             value={search}

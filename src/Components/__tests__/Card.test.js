@@ -1,11 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Card from "../Pages/Card";
-// import {render} from "@testing-library/react";
+import {render} from "@testing-library/react";
 
 it("Renders without Crashing", ()=>{
-    const div = document.createElement("div");
-    ReactDOM.render(<Card/>, div)
+    const div = document.createElement("card");
+    render(<Card/>, div)
 })
 
 // it("Renders Card corrrectly", ()=>{

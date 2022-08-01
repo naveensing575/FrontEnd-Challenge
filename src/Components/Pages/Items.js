@@ -3,10 +3,17 @@ function Items({broker}) {
 
   //prop drilling
   const{name, reviewCount, description, profilePicture, location, registration, rating}=broker;
-  const userCode= location.slice(5);
+
+  //creating a fall value so that above props don't pickup undefined on doing operations.
+  const nam=name || '';
+  const rtg= rating || 0;
+  const regis=registration || '';
+  const loc=location || '';
+  const userCode= loc.slice(5);
   const FixedDesc= description || '';
   const starIcon= <i className="fa-solid fa-star star"/>
-  //function for providing rating
+
+  //function to provide rating
   const handleRating=(rating)=>{
     let stars = [];
     if(rating>0)
@@ -22,18 +29,18 @@ function Items({broker}) {
     }
   }
   return (
-    <article id="Card">
+    <article id="Card" data-testid='item'>
         <div className="img-container">
           <img src={profilePicture} alt='user_image' className='image-style' height='120px' width='120px'/>
         </div>
-        <h4 className='name'>{name.length>15?name.slice(0,15):name}</h4>
-        <strong className='rating '>{rating===0?'':rating.toFixed(1)} {handleRating(rating)}</strong>
+        <h4 className='name'>{nam.length>15?nam.slice(0,15):nam}</h4>
+        <strong className='rating '>{rtg===0?'':rtg.toFixed(1)}  {handleRating(rtg)}</strong>
         <p className='reviews '>{reviewCount} <span className="count">Reviews</span> </p>
-        <small style={{}}>Description: {FixedDesc.length>15?description.slice(0,10):description}...</small>
+        <small>Description: {FixedDesc.length>15?FixedDesc.slice(0,10):FixedDesc}...</small>
         <hr/>
-        <i class="fa-solid fa-location-dot"></i> <span className="num-id">{location.slice(0,3)}</span>: <span className="color"> {userCode}</span>
-        <span className="num-id side">{registration.slice(0,3)}</span>: <span className="color">{registration.slice(5)}</span>
-        <button className='contact-button'>Contact</button>
+        <i className="fa-solid fa-location-dot"></i> <span className="num-id">{loc.slice(0,3)}</span>: <span className="color"> {userCode}</span>
+        <span className="num-id side">{regis.slice(0,3)}</span>: <span className="color">{regis.slice(5)}</span>
+        <button className='contact-button' onClick={()=>alert(nam + ' will contact you soon. Thanks👍')}>Contact</button>
       </article>
   )
 }

@@ -3,7 +3,7 @@ import Header from './Components/Pages/Header';
 function App() {
   return (
     <>
-      <Header/>
+      <Header data-testid="app"/>
     </>
   );
 }

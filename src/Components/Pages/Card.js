@@ -52,9 +52,9 @@ function Card({search}) {
         <div className='container' data-testid="card">
             <div className='row'>
         {
-            filteredData.map((broker)=>{
+            filteredData.map((broker, id)=>{
                 return (
-                <div className="col-md-3 col-xs-4" key={broker.id} >
+                <div className="col-md-3 col-xs-4" key={id} >
                     <Items broker={broker}/>
                 </div>    
             )})
