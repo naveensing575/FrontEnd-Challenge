@@ -17,6 +17,7 @@ function Card({search}) {
                     (broker) => {
                         setList(broker);
                         setLoading(false);
+                        // console.log(broker);
                     },
                     // Note: it's important to handle errors here
                     // instead of a catch() block so that we don't swallow
@@ -37,8 +38,8 @@ function Card({search}) {
         else
             return (broker.location.slice(5).includes(search))
     })
-    // console.log(search)
-    //condition for displaying loader and cards
+
+    //condition for displaying loader and card component
     if (error) {
         return <h3 className='d-flex align-items-center justify-content-center'>{error.message}</h3>;
     }

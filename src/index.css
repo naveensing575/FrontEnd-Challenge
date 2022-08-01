@@ -12,14 +12,19 @@ Global Styles
 }
 
   #Card{
-    height: 420px;
-    width: 260px;
-    background-color: #DFF6FF;
+    height: 430px;
+    width: 280px;
+    background-color: #fff;
     border-radius: 20px;
     border: 1px solid grey;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  #Card:hover{
+    outline: none !important;
+    border:1px solid cyan;
+    box-shadow: 0 0 10px #719ECE;
   }
   .name{
     margin-top: -25px;
@@ -57,7 +62,7 @@ Global Styles
   
   .user-input{
     padding: 24px 24px;
-    border: 1px solid black;
+    border: none;
     border-radius: 25px;
     width: 40%;
     height: 30px;
@@ -66,16 +71,12 @@ Global Styles
     letter-spacing: .1ch;
   }
 
-  .search-button:hover{
-  background: #7e8485;
-  border: none;
-  color: hsl(0, 0%, 100%);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transition: background-color 0.5s;
-  outline: none;
-  cursor: pointer;
+  .user-input:focus {
+    outline: none !important;
+    border:1px solid cyan;
+    box-shadow: 0 0 10px #719ECE;
   }
-  
+
   .search-button{
     padding: 10px 24px;
     width: 150px;
@@ -87,6 +88,12 @@ Global Styles
     border:none;
     letter-spacing: .1ch;
   }
+  .search-button:hover{
+    outline: none !important;
+    border:1px solid cyan;
+    box-shadow: 0 0 10px #719ECE;
+    background: #7e8485;
+  }
 
   .contact-button{
     padding: 8px;
@@ -97,22 +104,25 @@ Global Styles
     color: #fff;
     font-size: 15px;
     border:none;
-    margin-top: 20px;
+    margin-top: 25px;
     letter-spacing: .1ch;
   }
   .contact-button:hover{
+    outline: none !important;
+    border:1px solid cyan;
+    box-shadow: 0 0 10px #719ECE;
     background: #7e8485;
-    border: none;
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgba(139, 139, 145, 0.1) 0px 7px 29px 0px;
-    transition: background-color 0.5s;
-    outline: none;
-    cursor: pointer;
-    }
+  }
     
   .num-id{
     font-weight: bold;
+  }
+  .side{
     padding-left: 15px;
+  }
+  .star{
+    color: #5fd2ff;
+    letter-spacing: .2ch;
   }
 
   /*To reomve input field arrows*/
@@ -131,13 +141,6 @@ Global Styles
 
 /* Media Query for Mobile Devices */
    @media (max-width: 480px) {
-  body {
-    background-color: #06283D;
-  }
-  .container{
-    align-items: center;
-    justify-content: center;
-  }
   .user-input {
     font-size: medium;
     width: 250px;
@@ -153,13 +156,6 @@ Global Styles
   
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
-    body {
-        background-color: #06283D;
-    }
-    .container{
-      align-items: center;
-      justify-content: center;
-    }
     .user-input {
       font-size: medium;
       width: 250px;
