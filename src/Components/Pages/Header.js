@@ -21,7 +21,7 @@ function Header() {
         <input
             type="number"
             value={search}
-            placeholder="Find your broker..."
+            placeholder="Enter the Post Code (Ex: 2000, 3000, ...)"
             className='user-input'
             onChange={inputHandler}
             maxLength='4'
@@ -37,7 +37,7 @@ function Header() {
         />
         <button className='search-button' type='submit'>Search</button>
     </form>
-    <Card search={search}/>
+    <Card search={parseInt(search)}/>
     </>
 );
 }

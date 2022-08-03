@@ -4,7 +4,7 @@ function Items({broker}) {
   //prop drilling
   const{name, reviewCount, description, profilePicture, location, registration, rating}=broker;
 
-  //creating a fall value so that above props don't pickup undefined on doing operations.
+  //creating a fall-back value so that above props don't pickup undefined on doing operations.
   const nam=name || '';
   const rtg= rating || 0;
   const regis=registration || '';
